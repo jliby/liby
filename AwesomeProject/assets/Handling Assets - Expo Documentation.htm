@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<!-- saved from url=(0106)https://docs.expo.io/versions/v36.0.0/guides/preloading-and-caching-assets/#pre-loading-and-caching-assets -->
+<html lang="en" data-blockbyte-bs-uid="44515" class=" "><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">.tippy-touch{cursor:pointer!important}.tippy-notransition{-webkit-transition:none!important;transition:none!important}.tippy-popper{max-width:350px;-webkit-perspective:700px;perspective:700px;z-index:9999;outline:0;-webkit-transition-timing-function:cubic-bezier(.165,.84,.44,1);transition-timing-function:cubic-bezier(.165,.84,.44,1);pointer-events:none}.tippy-popper[data-html]{max-width:96%;max-width:calc(100% - 20px)}.tippy-popper[x-placement^=top] .tippy-backdrop{border-radius:40% 40% 0 0}.tippy-popper[x-placement^=top] .tippy-roundarrow{width:23px;height:23px;fill:#333;bottom:-15px;margin:0 6px}.tippy-popper[x-placement^=top] .tippy-roundarrow svg{-webkit-transform:rotate(180deg);transform:rotate(180deg)}.tippy-popper[x-placement^=top] .tippy-arrow{border-top:7px solid #333;border-right:7px solid transparent;border-left:7px solid transparent;bottom:-7px;margin:0 7px}.tippy-popper[x-placement^=top] .tippy-backdrop{-webkit-transform-origin:0 100%;transform-origin:0 100%}.tippy-popper[x-placement^=top] .tippy-backdrop[data-state=visible]{-webkit-transform:scale(5.5) translate(-50%,25%);transform:scale(5.5) translate(-50%,25%);opacity:1}.tippy-popper[x-placement^=top] .tippy-backdrop[data-state=hidden]{-webkit-transform:scale(1) translate(-50%,25%);transform:scale(1) translate(-50%,25%);opacity:0}.tippy-popper[x-placement^=top] [data-animation=shift-toward][data-state=visible]{opacity:1;-webkit-transform:translateY(-10px);transform:translateY(-10px)}.tippy-popper[x-placement^=top] [data-animation=shift-toward][data-state=hidden]{opacity:0;-webkit-transform:translateY(-20px);transform:translateY(-20px)}.tippy-popper[x-placement^=top] [data-animation=perspective]{-webkit-transform-origin:bottom;transform-origin:bottom}.tippy-popper[x-placement^=top] [data-animation=perspective][data-state=visible]{opacity:1;-webkit-transform:translateY(-10px) rotateX(0);transform:translateY(-10px) rotateX(0)}.tippy-popper[x-placement^=top] [data-animation=perspective][data-state=hidden]{opacity:0;-webkit-transform:translateY(0) rotateX(90deg);transform:translateY(0) rotateX(90deg)}.tippy-popper[x-placement^=top] [data-animation=fade][data-state=visible]{opacity:1;-webkit-transform:translateY(-10px);transform:translateY(-10px)}.tippy-popper[x-placement^=top] [data-animation=fade][data-state=hidden]{opacity:0;-webkit-transform:translateY(-10px);transform:translateY(-10px)}.tippy-popper[x-placement^=top] [data-animation=shift-away][data-state=visible]{opacity:1;-webkit-transform:translateY(-10px);transform:translateY(-10px)}.tippy-popper[x-placement^=top] [data-animation=shift-away][data-state=hidden]{opacity:0;-webkit-transform:translateY(0);transform:translateY(0)}.tippy-popper[x-placement^=top] [data-animation=scale][data-state=visible]{opacity:1;-webkit-transform:translateY(-10px) scale(1);transform:translateY(-10px) scale(1)}.tippy-popper[x-placement^=top] [data-animation=scale][data-state=hidden]{opacity:0;-webkit-transform:translateY(0) scale(0);transform:translateY(0) scale(0)}.tippy-popper[x-placement^=bottom] .tippy-backdrop{border-radius:0 0 30% 30%}.tippy-popper[x-placement^=bottom] .tippy-roundarrow{width:23px;height:23px;fill:#333;top:-15px;margin:0 6px}.tippy-popper[x-placement^=bottom] .tippy-roundarrow svg{-webkit-transform:rotate(0);transform:rotate(0)}.tippy-popper[x-placement^=bottom] .tippy-arrow{border-bottom:7px solid #333;border-right:7px solid transparent;border-left:7px solid transparent;top:-7px;margin:0 7px}.tippy-popper[x-placement^=bottom] .tippy-backdrop{-webkit-transform-origin:0 -100%;transform-origin:0 -100%}.tippy-popper[x-placement^=bottom] .tippy-backdrop[data-state=visible]{-webkit-transform:scale(5.5) translate(-50%,-125%);transform:scale(5.5) translate(-50%,-125%);opacity:1}.tippy-popper[x-placement^=bottom] .tippy-backdrop[data-state=hidden]{-webkit-transform:scale(1) translate(-50%,-125%);transform:scale(1) translate(-50%,-125%);opacity:0}.tippy-popper[x-placement^=bottom] [data-animation=shift-toward][data-state=visible]{opacity:1;-webkit-transform:translateY(10px);transform:translateY(10px)}.tippy-popper[x-placement^=bottom] [data-animation=shift-toward][data-state=hidden]{opacity:0;-webkit-transform:translateY(20px);transform:translateY(20px)}.tippy-popper[x-placement^=bottom] [data-animation=perspective]{-webkit-transform-origin:top;transform-origin:top}.tippy-popper[x-placement^=bottom] [data-animation=perspective][data-state=visible]{opacity:1;-webkit-transform:translateY(10px) rotateX(0);transform:translateY(10px) rotateX(0)}.tippy-popper[x-placement^=bottom] [data-animation=perspective][data-state=hidden]{opacity:0;-webkit-transform:translateY(0) rotateX(-90deg);transform:translateY(0) rotateX(-90deg)}.tippy-popper[x-placement^=bottom] [data-animation=fade][data-state=visible]{opacity:1;-webkit-transform:translateY(10px);transform:translateY(10px)}.tippy-popper[x-placement^=bottom] [data-animation=fade][data-state=hidden]{opacity:0;-webkit-transform:translateY(10px);transform:translateY(10px)}.tippy-popper[x-placement^=bottom] [data-animation=shift-away][data-state=visible]{opacity:1;-webkit-transform:translateY(10px);transform:translateY(10px)}.tippy-popper[x-placement^=bottom] [data-animation=shift-away][data-state=hidden]{opacity:0;-webkit-transform:translateY(0);transform:translateY(0)}.tippy-popper[x-placement^=bottom] [data-animation=scale][data-state=visible]{opacity:1;-webkit-transform:translateY(10px) scale(1);transform:translateY(10px) scale(1)}.tippy-popper[x-placement^=bottom] [data-animation=scale][data-state=hidden]{opacity:0;-webkit-transform:translateY(0) scale(0);transform:translateY(0) scale(0)}.tippy-popper[x-placement^=left] .tippy-backdrop{border-radius:30% 0 0 30%}.tippy-popper[x-placement^=left] .tippy-roundarrow{width:23px;height:23px;fill:#333;right:-15px;margin:4px 0}.tippy-popper[x-placement^=left] .tippy-roundarrow svg{-webkit-transform:rotate(90deg);transform:rotate(90deg)}.tippy-popper[x-placement^=left] .tippy-arrow{border-left:7px solid #333;border-top:7px solid transparent;border-bottom:7px solid transparent;right:-7px;margin:4px 0}.tippy-popper[x-placement^=left] .tippy-backdrop{-webkit-transform-origin:100% 0;transform-origin:100% 0}.tippy-popper[x-placement^=left] .tippy-backdrop[data-state=visible]{-webkit-transform:scale(5.5) translate(33%,-50%);transform:scale(5.5) translate(33%,-50%);opacity:1}.tippy-popper[x-placement^=left] .tippy-backdrop[data-state=hidden]{-webkit-transform:scale(1.5) translate(33%,-50%);transform:scale(1.5) translate(33%,-50%);opacity:0}.tippy-popper[x-placement^=left] [data-animation=shift-toward][data-state=visible]{opacity:1;-webkit-transform:translateX(-10px);transform:translateX(-10px)}.tippy-popper[x-placement^=left] [data-animation=shift-toward][data-state=hidden]{opacity:0;-webkit-transform:translateX(-20px);transform:translateX(-20px)}.tippy-popper[x-placement^=left] [data-animation=perspective]{-webkit-transform-origin:right;transform-origin:right}.tippy-popper[x-placement^=left] [data-animation=perspective][data-state=visible]{opacity:1;-webkit-transform:translateX(-10px) rotateY(0);transform:translateX(-10px) rotateY(0)}.tippy-popper[x-placement^=left] [data-animation=perspective][data-state=hidden]{opacity:0;-webkit-transform:translateX(0) rotateY(-90deg);transform:translateX(0) rotateY(-90deg)}.tippy-popper[x-placement^=left] [data-animation=fade][data-state=visible]{opacity:1;-webkit-transform:translateX(-10px);transform:translateX(-10px)}.tippy-popper[x-placement^=left] [data-animation=fade][data-state=hidden]{opacity:0;-webkit-transform:translateX(-10px);transform:translateX(-10px)}.tippy-popper[x-placement^=left] [data-animation=shift-away][data-state=visible]{opacity:1;-webkit-transform:translateX(-10px);transform:translateX(-10px)}.tippy-popper[x-placement^=left] [data-animation=shift-away][data-state=hidden]{opacity:0;-webkit-transform:translateX(0);transform:translateX(0)}.tippy-popper[x-placement^=left] [data-animation=scale][data-state=visible]{opacity:1;-webkit-transform:translateX(-10px) scale(1);transform:translateX(-10px) scale(1)}.tippy-popper[x-placement^=left] [data-animation=scale][data-state=hidden]{opacity:0;-webkit-transform:translateX(0) scale(0);transform:translateX(0) scale(0)}.tippy-popper[x-placement^=right] .tippy-backdrop{border-radius:0 30% 30% 0}.tippy-popper[x-placement^=right] .tippy-roundarrow{width:23px;height:23px;fill:#333;left:-15px;margin:4px 0}.tippy-popper[x-placement^=right] .tippy-roundarrow svg{-webkit-transform:rotate(-90deg);transform:rotate(-90deg)}.tippy-popper[x-placement^=right] .tippy-arrow{border-right:7px solid #333;border-top:7px solid transparent;border-bottom:7px solid transparent;left:-7px;margin:4px 0}.tippy-popper[x-placement^=right] .tippy-backdrop{-webkit-transform-origin:-100% 0;transform-origin:-100% 0}.tippy-popper[x-placement^=right] .tippy-backdrop[data-state=visible]{-webkit-transform:scale(5.5) translate(-133%,-50%);transform:scale(5.5) translate(-133%,-50%);opacity:1}.tippy-popper[x-placement^=right] .tippy-backdrop[data-state=hidden]{-webkit-transform:scale(1.5) translate(-133%,-50%);transform:scale(1.5) translate(-133%,-50%);opacity:0}.tippy-popper[x-placement^=right] [data-animation=shift-toward][data-state=visible]{opacity:1;-webkit-transform:translateX(10px);transform:translateX(10px)}.tippy-popper[x-placement^=right] [data-animation=shift-toward][data-state=hidden]{opacity:0;-webkit-transform:translateX(20px);transform:translateX(20px)}.tippy-popper[x-placement^=right] [data-animation=perspective]{-webkit-transform-origin:left;transform-origin:left}.tippy-popper[x-placement^=right] [data-animation=perspective][data-state=visible]{opacity:1;-webkit-transform:translateX(10px) rotateY(0);transform:translateX(10px) rotateY(0)}.tippy-popper[x-placement^=right] [data-animation=perspective][data-state=hidden]{opacity:0;-webkit-transform:translateX(0) rotateY(90deg);transform:translateX(0) rotateY(90deg)}.tippy-popper[x-placement^=right] [data-animation=fade][data-state=visible]{opacity:1;-webkit-transform:translateX(10px);transform:translateX(10px)}.tippy-popper[x-placement^=right] [data-animation=fade][data-state=hidden]{opacity:0;-webkit-transform:translateX(10px);transform:translateX(10px)}.tippy-popper[x-placement^=right] [data-animation=shift-away][data-state=visible]{opacity:1;-webkit-transform:translateX(10px);transform:translateX(10px)}.tippy-popper[x-placement^=right] [data-animation=shift-away][data-state=hidden]{opacity:0;-webkit-transform:translateX(0);transform:translateX(0)}.tippy-popper[x-placement^=right] [data-animation=scale][data-state=visible]{opacity:1;-webkit-transform:translateX(10px) scale(1);transform:translateX(10px) scale(1)}.tippy-popper[x-placement^=right] [data-animation=scale][data-state=hidden]{opacity:0;-webkit-transform:translateX(0) scale(0);transform:translateX(0) scale(0)}.tippy-tooltip{position:relative;color:#fff;border-radius:4px;font-size:.9rem;padding:.3rem .6rem;text-align:center;will-change:transform;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;background-color:#333}.tippy-tooltip[data-size=small]{padding:.2rem .4rem;font-size:.75rem}.tippy-tooltip[data-size=large]{padding:.4rem .8rem;font-size:1rem}.tippy-tooltip[data-animatefill]{overflow:hidden;background-color:transparent}.tippy-tooltip[data-animatefill] .tippy-content{-webkit-transition:-webkit-clip-path cubic-bezier(.46,.1,.52,.98);transition:-webkit-clip-path cubic-bezier(.46,.1,.52,.98);transition:clip-path cubic-bezier(.46,.1,.52,.98);transition:clip-path cubic-bezier(.46,.1,.52,.98),-webkit-clip-path cubic-bezier(.46,.1,.52,.98)}.tippy-tooltip[data-interactive]{pointer-events:auto}.tippy-tooltip[data-inertia][data-state=visible]{-webkit-transition-timing-function:cubic-bezier(.53,2,.36,.85);transition-timing-function:cubic-bezier(.53,2,.36,.85)}.tippy-tooltip[data-inertia][data-state=hidden]{-webkit-transition-timing-function:ease;transition-timing-function:ease}.tippy-arrow,.tippy-roundarrow{position:absolute;width:0;height:0}.tippy-backdrop{position:absolute;will-change:transform;background-color:#333;border-radius:50%;width:26%;left:50%;top:50%;z-index:-1;-webkit-transition:all cubic-bezier(.46,.1,.52,.98);transition:all cubic-bezier(.46,.1,.52,.98);-webkit-backface-visibility:hidden;backface-visibility:hidden}.tippy-backdrop:after{content:"";float:left;padding-top:100%}body:not(.tippy-touch) .tippy-tooltip[data-animatefill][data-state=visible] .tippy-content{-webkit-clip-path:ellipse(100% 100% at 50% 50%);clip-path:ellipse(100% 100% at 50% 50%)}body:not(.tippy-touch) .tippy-tooltip[data-animatefill][data-state=hidden] .tippy-content{-webkit-clip-path:ellipse(5% 50% at 50% 50%);clip-path:ellipse(5% 50% at 50% 50%)}body:not(.tippy-touch) .tippy-popper[x-placement=right] .tippy-tooltip[data-animatefill][data-state=visible] .tippy-content{-webkit-clip-path:ellipse(135% 100% at 0 50%);clip-path:ellipse(135% 100% at 0 50%)}body:not(.tippy-touch) .tippy-popper[x-placement=right] .tippy-tooltip[data-animatefill][data-state=hidden] .tippy-content{-webkit-clip-path:ellipse(25% 100% at 0 50%);clip-path:ellipse(25% 100% at 0 50%)}body:not(.tippy-touch) .tippy-popper[x-placement=left] .tippy-tooltip[data-animatefill][data-state=visible] .tippy-content{-webkit-clip-path:ellipse(135% 100% at 100% 50%);clip-path:ellipse(135% 100% at 100% 50%)}body:not(.tippy-touch) .tippy-popper[x-placement=left] .tippy-tooltip[data-animatefill][data-state=hidden] .tippy-content{-webkit-clip-path:ellipse(25% 100% at 100% 50%);clip-path:ellipse(25% 100% at 100% 50%)}@media (max-width:360px){.tippy-popper{max-width:96%;max-width:calc(100% - 20px)}}</style><script async="" src="./Handling Assets - Expo Documentation_files/analytics.js"></script><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create', 'UA-107832480-3', {cookieDomain: 'auto', siteSpeedSampleRate: 100});ga('send', 'pageview');</script><script src="./Handling Assets - Expo Documentation_files/prism.js"></script><script src="./Handling Assets - Expo Documentation_files/tippy.all.min.js"></script><script src="./Handling Assets - Expo Documentation_files/nprogress.js"></script><style>.css-17zxqdt{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-align-items:flex-end;-webkit-box-align:flex-end;-ms-flex-align:flex-end;align-items:flex-end;}.css-17zxqdt .searchbox{width:auto;}.css-17zxqdt .searchbox__submit{pointer-events:none;}.css-17zxqdt .searchbox__input,.css-17zxqdt input{font-family:expo-brand-book,sans-serif;color:rgba(0,0,32,0.8);box-sizing:border-box;width:380px;font-size:14px;padding:2px 36px 0 8px;border-radius:5px;height:32px;outline:0;border:1px solid #ECECEC;box-shadow:0px 1px 4px rgba(0,0,0,0.04);}.css-17zxqdt .searchbox__input:focus,.css-17zxqdt input:focus{border:1px solid #4630EB;outline:0;}.css-17zxqdt .svg-icons{left:240px;}@media screen and (max-width:748px){.css-17zxqdt{display:none;}}.css-1rh54um{display:-webkit-inline-box;display:-webkit-inline-flex;display:-ms-inline-flexbox;display:inline-flex;position:relative;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;margin:0;height:48px;padding:5px 16px 0 16px;border-left:1px solid #ECECEC;}.css-1lyhobo{font-family:expo-brand-demi,sans-serif;color:rgba(0,0,32,1);font-size:14px;padding-bottom:1px;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;}.css-3t8zi6{position:absolute;height:100%;top:0;left:0;right:0;bottom:0;opacity:0;width:100%;border-radius:0px;}.css-ov1ktg{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;}.css-1ptin5p{-webkit-flex-shrink:0;-ms-flex-negative:0;flex-shrink:0;padding-right:24px;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:end;-webkit-justify-content:flex-end;-ms-flex-pack:end;justify-content:flex-end;}.css-1wzqzdd{min-width:5%;height:100%;width:100%;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:end;-webkit-justify-content:flex-end;-ms-flex-pack:end;justify-content:flex-end;}.css-vocxkx{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;padding-top:8px;}.css-mn09n{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:justify;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between;height:48px;width:100%;padding:0 24px 0 24px;}@media screen and (max-width:748px){.css-mn09n{padding:0 16px 0 16px;}}.css-ae52q9{width:170px;white-space:nowrap;padding:0 0 0 8px;font-size:1.3rem;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;padding-bottom:2px;font-family:expo-brand-demi;}@media screen and (max-width:340px){.css-ae52q9{display:none;}}.css-bpiw2c{cursor:pointer;height:100%;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;padding-left:24px;margin-left:16px;border-left:1px solid #ECECEC;-webkit-text-decoration:none;text-decoration:none;color:rgba(0,0,32,1);}.css-bpiw2c:visited{color:rgba(0,0,32,1);}.css-bpiw2c:hover{color:#4630EB;}@media screen and (max-width:748px){.css-bpiw2c{padding-left:16px;}}.css-1a3whfz{display:none;}@media screen and (max-width:748px){.css-1a3whfz{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;}}.css-y7h5jf{font-family:expo-brand-book;font-size:2.4rem;line-height:2.75rem;margin-bottom:1.5rem;margin-top:0.1rem;padding-bottom:0.25rem;border-bottom:1px solid #ECECEC;}.css-da6ez6{font-family:expo-brand-book;line-height:1.75rem;font-size:1.5rem;margin-bottom:1rem;margin-top:2.2rem;padding-bottom:0.3rem;border-bottom:1px solid #ECECEC;}.css-utowyr{font-family:expo-brand-bold,sans-serif;font-weight:400;-webkit-letter-spacing:0.3px;-moz-letter-spacing:0.3px;-ms-letter-spacing:0.3px;letter-spacing:0.3px;}.css-1d4g4y7{font-size:1rem;line-height:1.8rem;margin-bottom:1.4rem;}.css-1d4g4y7.is-wider{max-width:1200px;}@media screen and (max-width:748px){.css-1d4g4y7.is-wider{max-width:100%;width:100%;}}.css-80nrkz{font-family:expo-brand-book,sans-serif;padding:12px 24px;border-left:5px solid rgba(153,153,165,1);margin:0 0 1.5rem 0;color:rgba(0,0,32,0.8);}.css-80nrkz div{margin:0;}.css-7adv9h{border-top:1px solid #ECECEC;padding:24px 0 24px 0;}.css-vwj8sk{display:block;-webkit-text-decoration:none;text-decoration:none;margin-bottom:12px;}.css-17n9ee2{display:block;margin-bottom:10px;line-height:1.3rem;-webkit-text-decoration:none;text-decoration:none;}.css-1qpyj33{font-family:expo-brand-demi,sans-serif;color:#5844ed;}.css-1qpyj33:visited{color:#4630EB;}.css-1qpyj33:hover{color:#4630EB;}.css-mio2td{font-family:expo-brand-book,sans-serif;color:rgba(0,0,32,0.8);-webkit-transition:200ms ease color;transition:200ms ease color;}.css-mio2td:visited{color:rgba(0,0,32,0.6);}.css-mio2td:hover{color:#4630EB;}.css-jul3dd{display:block;position:relative;margin-bottom:14px;line-height:1.3rem;-webkit-text-decoration:none;text-decoration:none;border-bottom-color:#ccc;font-family:expo-brand-demi,sans-serif;}.css-187wcj4{color:#5844ed;}.css-187wcj4:visited{color:#4630EB;}.css-187wcj4:hover{color:#4630EB;}.css-1o5yobv{color:rgba(0,0,32,0.4);-webkit-transition:200ms ease color;transition:200ms ease color;}.css-1o5yobv:visited{color:rgba(0,0,32,0.4);}.css-1o5yobv:hover{color:#4630EB;}.css-768f4r{display:block;position:relative;margin-bottom:16px;line-height:1.3rem;-webkit-text-decoration:none;text-decoration:none;font-family:expo-brand-demi,sans-serif;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;}.css-768f4r:hover{cursor:pointer;}.css-kplx8c{display:block;border-left-width:1px;border-left-color:#ccc;border-left-style:dashed;padding-left:15px;}.css-rcoh84{padding:20px 24px 24px 24px;width:280px;}@media screen and (max-width:748px){.css-rcoh84{width:100%;}}.css-jtawwa{margin-bottom:32px;}body{background:#F6F6F6;}@media screen and (max-width:1440px){body{background:#FFFFFF;}}@media screen and (max-width:748px){html::-webkit-scrollbar{width:6px;}html::-webkit-scrollbar-track{background:#FFFFFF;}html::-webkit-scrollbar-thumb{background:rgba(0,0,32,0.6);}html::-webkit-scrollbar-thumb:hover{background:#4630EB;}}.css-12q4rn9{max-width:1440px;width:100%;height:100vh;overflow;hidden;margin:0 auto 0 auto;border-left:1px solid #ECECEC;border-right:1px solid #ECECEC;background:#FFFFFF;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:justify;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;}@media screen and (max-width:1440px){.css-12q4rn9{border-left:0px;border-right:0px;}}@media screen and (max-width:748px){.css-12q4rn9{display:block;height:auto;}}.css-szq7sb{border-bottom:1px solid #ECECEC;-webkit-flex-shrink:0;-ms-flex-negative:0;flex-shrink:0;width:100%;}.css-1hiw76i{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-align-items:flex-start;-webkit-box-align:flex-start;-ms-flex-align:flex-start;align-items:flex-start;-webkit-box-pack:justify;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between;width:100%;height:100%;min-height:25%;}@media screen and (max-width:748px){.css-1hiw76i{height:auto;}}.css-1st8cx{-webkit-flex-shrink:0;-ms-flex-negative:0;flex-shrink:0;border-right:1px solid #ECECEC;max-width:280px;height:100%;overflow:hidden;-webkit-transition:200ms ease max-width;transition:200ms ease max-width;}@media screen and (max-width:1200px){.css-1st8cx{max-width:240px;}}@media screen and (max-width:748px){.css-1st8cx{display:none;}}.css-100ilho{min-width:5%;width:100%;height:100%;overflow:hidden;}@media screen and (max-width:748px){.css-100ilho{height:auto;overflow:auto;}}.css-18vyaad{height:100%;width:100%;padding-bottom:36px;overflow-y:scroll;overflow-x:hidden;-webkit-overflow-scrolling:touch;}.css-18vyaad::-webkit-scrollbar{width:6px;}.css-18vyaad::-webkit-scrollbar-track{background:#FFFFFF;}.css-18vyaad::-webkit-scrollbar-thumb{background:rgba(0,0,32,0.6);}.css-18vyaad::-webkit-scrollbar-thumb:hover{background:#4630EB;}@media screen and (max-width:748px){.css-18vyaad{overflow-y:auto;}}.css-145o6e2{padding:24px 24px 24px 32px;}.css-145o6e2 hr{border-top:1px solid #ECECEC;border-bottom:0px;}@media screen and (max-width:748px){.css-145o6e2{padding:32px 16px 48px 16px;}}.css-s1wts9{color:rgba(0,0,32,0.8);font-family:expo-brand-mono,monospace;font-size:13px;line-height:20px;white-space:inherit;padding:0px;margin:0px;}.css-s1wts9 .code-annotation{-webkit-transition:200ms ease all;transition:200ms ease all;-webkit-transition-property:text-shadow,opacity;transition-property:text-shadow,opacity;text-shadow:rgba(255,255,0,1) 0px 0px 10px,rgba(255,255,0,1) 0px 0px 10px, rgba(255,255,0,1) 0px 0px 10px,rgba(255,255,0,1) 0px 0px 10px;}.css-s1wts9 .code-annotation:hover{cursor:pointer;-webkit-animation:none;animation:none;opacity:0.8;}.css-i30qvr{color:rgba(0,0,32,0.8);font-family:expo-brand-mono,monospace;font-size:0.9rem;white-space:pre-wrap;display:inline;padding:4px;margin:2px;line-height:20px;max-width:100%;word-wrap:break-word;background-color:rgba(0,1,31,0.03);vertical-align:middle;overflow-x:scroll;}.css-i30qvr::before{content:'';}.css-i30qvr::after{content:'';}.css-bp3bi7{border:1px solid #ECECEC;padding:24px;margin:16px 0 16px 0;white-space:pre;overflow:auto;-webkit-overflow-scrolling:touch;background-color:rgba(0,1,31,0.03);line-height:1.2rem;}.css-auvd9r{-webkit-text-decoration:none;text-decoration:none;color:#5844ed;font-size:inherit;}.css-auvd9r:hover{-webkit-text-decoration:underline;text-decoration:underline;}.css-i07u6a{position:relative;}.css-i07u6a .anchor-icon{cursor:pointer;position:absolute;top:2px;width:20px;height:20px;visibility:hidden;}.css-i07u6a:hover .anchor-icon{visibility:visible;}.css-1lc60ja{position:absolute;top:0;left:-24px;width:20px;height:20px;}.css-1fj428k{display:block;position:absolute top:-100px;visibility:hidden;}.css-bdja6z{text-shadow:rgba(255,255,0,1) 0px 0px 10px,rgba(255,255,0,1) 0px 0px 10px, rgba(255,255,0,1) 0px 0px 10px,rgba(255,255,0,1) 0px 0px 10px;}</style><style>@font-face{font-family:'expo-brand-bold';src:url('/static/fonts/MaisonNeue-Bold.woff2');src:url('/static/fonts/MaisonNeue-Bold.woff')format('woff');}@font-face{font-family:expo-brand-book;src:url('/static/fonts/MaisonNeue-Book.woff2');src:url('/static/fonts/MaisonNeue-Book.woff')format('woff');}@font-face{font-family:expo-brand-demi;src:url('/static/fonts/MaisonNeue-Demi.woff2');src:url('/static/fonts/MaisonNeue-Demi.woff')format('woff');}@font-face{font-family:expo-brand-light;src:url('/static/fonts/MaisonNeue-Light.woff2');src:url('/static/fonts/MaisonNeue-Light.woff')format('woff');}@font-face{font-family:expo-brand-mono;src:url('/static/fonts/MaisonNeue-Mono.woff2');src:url('/static/fonts/MaisonNeue-Mono.woff')format('woff');}</style><style>
+    html, body, div, span, applet, object, iframe,
+    h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+    a, abbr, acronym, address, big, cite, code,
+    del, dfn, em, img, ins, kbd, q, s, samp,
+    small, strike, strong, sub, sup, tt, var,
+    b, u, i, center,
+    dl, dt, dd, ol, ul, li,
+    fieldset, form, label, legend,
+    table, caption, tbody, tfoot, thead, tr, th, td,
+    article, aside, canvas, details, embed,
+    figure, figcaption, footer, header, hgroup,
+    menu, nav, output, ruby, section, summary,
+    time, mark, audio, video {
+      font-weight: 400;
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      border: 0;
+      vertical-align: baseline;
+    }
+
+    article, aside, details, figcaption, figure,
+    footer, header, hgroup, menu, nav, section {
+      display: block;
+    }
+
+    img {
+      max-width: 768px;
+      width: 100%;
+    }
+
+    a {
+      -webkit-tap-highlight-color: rgba(0,0,0,0);
+      color: #5844ed;
+    }
+
+    body {
+      font-family: expo-brand-book;
+      text-rendering: optimizeLegibility;
+      font-size: 16px;
+    }
+
+    @media screen and (max-width: 748px) {
+      body {
+        font-size: 14px;
+      }
+    }
+
+    ::selection {
+      background-color: #A3A1F7;
+      color: rgba(0, 0, 32, 1);
+    }
+</style><style>
+#nprogress{pointer-events:none;}#nprogress .bar{background:#5844ed;position:fixed;z-index:1031;top:0;left:0;width:100%;height:2px;}#nprogress .peg{display:block;position:absolute;right:0px;width:100px;height:100%;box-shadow:0 0 10px #29d,0 0 5px #29d;opacity:1.0;-webkit-transform:rotate(3deg) translate(0px,-4px);-ms-transform:rotate(3deg) translate(0px,-4px);transform:rotate(3deg) translate(0px,-4px);}#nprogress .spinner{display:none;position:fixed;z-index:1031;top:15px;right:15px;}#nprogress .spinner-icon{display:none;width:18px;height:18px;box-sizing:border-box;border:solid 2px transparent;border-top-color:#29d;border-left-color:#29d;border-radius:50%;-webkit-animation:nprogress-spinner 400ms linear infinite;animation:nprogress-spinner 400ms linear infinite;}.nprogress-custom-parent{overflow:hidden;position:relative;}.nprogress-custom-parent #nprogress .spinner,.nprogress-custom-parent #nprogress .bar{position:absolute;}@-webkit-keyframes nprogress-spinner{0%{-webkit-transform:rotate(0deg);}100%{-webkit-transform:rotate(360deg);}}@keyframes nprogress-spinner{0%{transform:rotate(0deg);}100%{transform:rotate(360deg);}}
+</style><style>
+  table {
+    margin-bottom: 1rem;
+    font-size: 0.8rem;
+    line-height: 1.2rem;
+    border-collapse: collapse;
+    border: 1px solid #ECECEC;
+    border-radius: 4px;
+    width: 100%;
+  }
+
+  thead {
+    border-radius: 4px 4px 0 0;
+    text-align: left;
+  }
+
+  td, th {
+    padding: 16px;
+    border-bottom: 1px solid #ECECEC;
+    border-right: 1px solid #ECECEC;
+
+    :last-child {
+      border-right: 0px;
+    }
+  }
+
+  td {
+    text-align: left;
+  }
+
+  th {
+    font-family: expo-brand-bold, sans-serif;
+    font-weight: 400;
+  }
+</style><style>
+  :not(pre) > code[class*='language-'],
+  pre[class*='language-'] {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin-bottom: 1em;
+  }
+
+  :not(pre) > code[class*='language-'] {
+    position: relative;
+    padding: 0.2em;
+    border-radius: 0.3em;
+    color: #c92c2c;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    display: inline;
+    white-space: normal;
+  }
+
+  pre[class*='language-']:before,
+  pre[class*='language-']:after {
+    content: '';
+    z-index: -2;
+    display: block;
+    position: absolute;
+    bottom: 0.75em;
+    left: 0.18em;
+    width: 40%;
+    height: 20%;
+    max-height: 13em;
+  }
+
+  :not(pre) > code[class*='language-']:after,
+  pre[class*='language-']:after {
+    right: 0.75em;
+    left: auto;
+    -webkit-transform: rotate(2deg);
+    -moz-transform: rotate(2deg);
+    -ms-transform: rotate(2deg);
+    -o-transform: rotate(2deg);
+    transform: rotate(2deg);
+  }
+
+  .token.comment,
+  .token.block-comment,
+  .token.prolog,
+  .token.doctype,
+  .token.cdata {
+    color: #7d8b99;
+  }
+
+  .token.punctuation {
+    color: #5f6364;
+  }
+
+  .token.property,
+  .token.tag,
+  .token.boolean,
+  .token.number,
+  .token.function-name,
+  .token.constant,
+  .token.symbol,
+  .token.deleted {
+    color: #c92c2c;
+  }
+
+  .token.selector,
+  .token.attr-name,
+  .token.string,
+  .token.char,
+  .token.function,
+  .token.builtin,
+  .token.inserted {
+    color: #2f9c0a;
+  }
+
+  .token.operator,
+  .token.entity,
+  .token.url,
+  .token.variable {
+    color: #a67f59;
+  }
+
+  .token.atrule,
+  .token.attr-value,
+  .token.keyword,
+  .token.class-name {
+    color: #1990b8;
+  }
+
+  .token.regex,
+  .token.important {
+    color: #e90;
+  }
+
+  .language-css .token.string,
+  .style .token.string {
+    color: #a67f59;
+  }
+
+  .token.important {
+    font-weight: normal;
+  }
+
+  .token.bold {
+    font-weight: bold;
+  }
+  .token.italic {
+    font-style: italic;
+  }
+
+  .token.entity {
+    cursor: help;
+  }
+
+  .namespace {
+    opacity: 0.7;
+  }
+
+  @media screen and (max-width: 767px) {
+    pre[class*='language-']:before,
+    pre[class*='language-']:after {
+      bottom: 14px;
+      box-shadow: none;
+    }
+  }
+
+  .token.tab:not(:empty):before,
+  .token.cr:before,
+  .token.lf:before {
+    color: #e0d7d1;
+  }
+
+  pre[class*='language-'].line-numbers {
+    padding-left: 0;
+  }
+
+  pre[class*='language-'].line-numbers code {
+    padding-left: 3.8em;
+  }
+
+  pre[class*='language-'].line-numbers .line-numbers-rows {
+    left: 0;
+  }
+
+  pre[class*='language-'][data-line] {
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+  }
+  pre[data-line] code {
+    position: relative;
+    padding-left: 4em;
+  }
+  pre .line-highlight {
+    margin-top: 0;
+  }
+</style><style>
+  div.tippy-tooltip {
+    font-size: 0.9rem;
+    line-height: 1.625rem;
+    padding: 16px;
+    color: #FFFFFF;
+    background-color: rgba(0, 0, 32, 1);
+    color: black;
+    text-align: left;
+  }
+
+  .tippy-popper[x-placement^='top'] .tippy-tooltip .tippy-roundarrow {
+    fill: rgba(0, 0, 32, 1);
+  }
+
+  .tippy-tooltip.expo-theme .tippy-content {
+    font-size: 1rem;
+    line-height: 1.725rem;
+    color: #FFFFFF;
+    font-family: expo-brand-book;
+  }
+
+  .tippy-content a {
+    color: #eee;
+  }
+</style><style>
+  img.wide-image {
+    max-width: 900px;
+  }
+
+  img[src*="https://placehold.it/15"] {
+    width: 15px !important;
+    height: 15px !important;
+  }
+
+  .react-player > video {
+    outline: none;
+  }
+
+  blockquote {
+    background: #fbfbfb;
+  }
+
+  details {
+    margin-bottom: 20px;
+    padding-top: 20px;
+  }
+
+  details summary {
+    outline: none;
+    cursor: pointer;
+    margin-bottom: 15px;
+  }
+
+  details summary h3 {
+    font-size: 1.2rem;
+    font-family: expo-brand-bold,sans-serif;
+    display: inline;
+  }
+
+  details summary h4 {
+    font-size: 1.1rem;
+    font-family: expo-brand-bold,sans-serif;
+    display: inline;
+  }
+
+  details summary p {
+    margin-top: 10px;
+    margin-right: 15px;
+    line-height: 1.725rem;
+    letter-spacing: 0.2px;
+  }
+
+  details summary:hover {
+    opacity: 0.75;
+  }
+
+  details p {
+    margin-left: 15px;
+  }
+
+  .snack-inline-example-button {
+    display: inline-block;
+    border: none;
+    border-radius: 3px;
+    padding: 0.8rem 1rem;
+    margin: 0;
+    margin-bottom: 0.5rem;
+    text-decoration: none;
+    background: #5844ed;
+    color: #ffffff;
+    font-family: sans-serif;
+    font-size: 1rem;
+    cursor: pointer;
+    text-align: center;
+    transition: background 250ms ease-in-out, 
+                transform 150ms ease;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+  }
+
+  .snack-inline-example-button:hover, .snack-inline-example-button:focus  {
+    background: #322596;
+  }
+
+  .snack-inline-example-button:focus {
+      outline: 1px solid #fff;
+      outline-offset: -4px;
+  }
+
+  .snack-inline-example-button:active {
+      transform: scale(0.99);
+  }
+</style><link rel="stylesheet" href="./Handling Assets - Expo Documentation_files/algolia.min.css"><link rel="stylesheet" href="./Handling Assets - Expo Documentation_files/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"><title class="next-head">Handling Assets - Expo Documentation</title><meta http-equiv="X-UA-Compatible" content="IE=edge" class="next-head"><meta name="viewport" content="width=device-width, initial-scale=1.0" class="next-head"><link rel="icon" type="image/png" href="https://docs.expo.io/static/images/favicon.ico" sizes="32x32" class="next-head"><link rel="preload" href="./Handling Assets - Expo Documentation_files/text.js" as="script"><link rel="preload" href="./Handling Assets - Expo Documentation_files/_app.js" as="script"><link rel="preload" href="./Handling Assets - Expo Documentation_files/webpack-f0c6edbea5b547edc23f.js" as="script"><link rel="preload" href="./Handling Assets - Expo Documentation_files/commons.d50483a6801bab0d0fdb.js" as="script"><link rel="preload" href="./Handling Assets - Expo Documentation_files/main-cbdc5c03a076ff5cd7d3.js" as="script"><style data-emotion=""></style><style class="blockbyte-bs-style" data-name="content">body>div#blockbyte-bs-indicator>div{opacity:0;pointer-events:none}body>iframe#blockbyte-bs-sidebar.blockbyte-bs-visible,body>iframe#blockbyte-bs-overlay.blockbyte-bs-visible{opacity:1;pointer-events:auto}body.blockbyte-bs-noscroll{overflow:hidden !important}body>div#blockbyte-bs-indicator>div{position:absolute;transform:translate3d(-40px, 0, 0);top:0;left:0;width:40px !important;height:100%;background:rgba(0,0,0,0.5);border-radius:0 10px 10px 0;transition:opacity 0.3s, transform 0.3s;z-index:2}body>div#blockbyte-bs-indicator>div>span{-webkit-mask:no-repeat center/32px;-webkit-mask-image:url(chrome-extension://jdbnofccmhefkmjbkkdkfiicjkgofkdh/img/icon-bookmark.svg);background-color:#ffffff;position:absolute;display:block;top:0;left:0;width:100%;height:100%}body>div#blockbyte-bs-indicator[data-pos='right']{left:auto;right:0}body>div#blockbyte-bs-indicator[data-pos='right']>div{transform:translate3d(40px, 0, 0);left:auto;right:0;border-radius:10px 0 0 10px}body>div#blockbyte-bs-indicator.blockbyte-bs-fullHeight>div{border-radius:0}body>div#blockbyte-bs-indicator.blockbyte-bs-hover>div{transform:translate3d(0, 0, 0);opacity:1}body>div#blockbyte-bs-indicator[data-pos='left'].blockbyte-bs-has-lsb{height:100% !important;top:0 !important}body>div#blockbyte-bs-indicator[data-pos='left'].blockbyte-bs-has-lsb>div{background:transparent}body>div#blockbyte-bs-indicator[data-pos='left'].blockbyte-bs-has-lsb>div>span{-webkit-mask-position-y:20px}body>iframe#blockbyte-bs-sidebar{width:350px;max-width:none;height:0;z-index:2147483646;background-color:rgba(0,0,0,0.6) !important;border:none;display:block !important;transform:translate3d(-350px, 0, 0);will-change:width, height, opacity, transform;transition:width 0s 0.3s, height 0s 0.3s, opacity 0.3s, transform 0.3s}body>iframe#blockbyte-bs-sidebar[data-pos='right']{left:auto;right:0;transform:translate3d(350px, 0, 0)}body>iframe#blockbyte-bs-sidebar.blockbyte-bs-visible{width:calc(100% + 350px);height:100%;transform:translate3d(0, 0, 0);transition:opacity 0.3s, transform 0.3s}body>iframe#blockbyte-bs-sidebar.blockbyte-bs-hideMask{background:none !important}body>iframe#blockbyte-bs-sidebar.blockbyte-bs-hideMask:not(.blockbyte-bs-hover){width:calc(350px + 50px)}body>iframe#blockbyte-bs-overlay{width:100%;max-width:none;height:100%;z-index:2147483647;border:none;background:rgba(0,0,0,0.5) !important;transition:opacity 0.3s}
+</style><link rel="canonical" href="https://docs.expo.io/versions/latest/guides/preloading-and-caching-assets/" class="next-head"></head><body data-gr-c-s-loaded="true"><div id="__next"><div class="css-12q4rn9"><div class="css-szq7sb"><header class="css-mn09n"><div class="css-1ptin5p"><div class="css-vocxkx"><a class="css-ov1ktg" href="https://docs.expo.io/versions/"><span><img src="./Handling Assets - Expo Documentation_files/header-logo.png" alt="Expo" style="width: 27px; height: 29px;"></span></a><h1 class="css-ae52q9">Documentation</h1></div><div class="css-1rh54um"><label class="css-1lyhobo" for="version-menu">SDK36 <svg xmlns="http://www.w3.org/2000/svg" height="12px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-left: 8px;"><polyline points="6 9 12 15 18 9"></polyline></svg></label><a href="https://docs.expo.io/versions/latest/" style="display: none;"></a><a href="https://docs.expo.io/versions/v33.0.0/" style="display: none;"></a><a href="https://docs.expo.io/versions/v34.0.0/" style="display: none;"></a><a href="https://docs.expo.io/versions/v35.0.0/" style="display: none;"></a><a href="https://docs.expo.io/versions/v36.0.0/" style="display: none;"></a><select class="css-3t8zi6" id="version-menu"><option value="v36.0.0">SDK36</option><option value="v35.0.0">SDK35</option><option value="v34.0.0">SDK34</option><option value="v33.0.0">SDK33</option><option value="latest">latest (v36.0.0)</option></select></div></div><div class="css-1wzqzdd"><div class="css-17zxqdt"><span class="algolia-autocomplete" style="position: relative; display: inline-block; direction: ltr;"><input id="algolia-search-box" type="text" placeholder="Search SDK36 docs" autocomplete="off" spellcheck="false" dir="auto" class="ds-input" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-owns="algolia-autocomplete-listbox-2" style="position: relative; vertical-align: top;"><pre aria-hidden="true" style="position: absolute; visibility: hidden; white-space: pre; font-family: expo-brand-book, sans-serif; font-size: 14px; font-style: normal; font-variant: normal; font-weight: 400; word-spacing: 0px; letter-spacing: normal; text-indent: 0px; text-rendering: auto; text-transform: none;"></pre><span class="ds-dropdown-menu" role="listbox" id="algolia-autocomplete-listbox-2" style="position: absolute; top: 100%; z-index: 100; display: none; left: 0px; right: auto;"><div class="ds-dataset-3"></div></span></span></div><span class="css-bpiw2c css-1a3whfz"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg></span></div></header></div><div class="css-1hiw76i"><div class="css-1st8cx"><div class="css-18vyaad"><nav class="css-rcoh84" data-sidebar="true"><div><a class="css-768f4r css-187wcj4">The Basics<i class="fas fa-chevron-up" style="position: absolute; right: 0px;"></i></a><div class="css-kplx8c"><div class="css-jtawwa"><div class="css-jul3dd">Introduction</div><a class="css-17n9ee2 css-mio2td" href="https://docs.expo.io/versions/v36.0.0/">What is Expo?</a><a class="css-17n9ee2 css-mio2td" href="https://docs.expo.io/versions/v36.0.0/introduction/managed-vs-bare/">Workflows</a><a class="css-17n9ee2 css-mio2td" href="https://docs.expo.io/versions/v36.0.0/introduction/walkthrough/">Walkthrough</a><a class="css-17n9ee2 css-mio2td" href="https://docs.expo.io/versions/v36.0.0/introduction/why-not-expo/">Limitations</a><a class="css-17n9ee2 css-mio2td" href="https://docs.expo.io/versions/v36.0.0/introduction/faq/">Common questions</a></div><div class="css-jtawwa"><div class="css-jul3dd">Get Started</div><a class="css-17n9ee2 css-mio2td" href="https://docs.expo.io/versions/v36.0.0/get-started/installation/">Installation</a><a class="css-17n9ee2 css-mio2td" href="https://docs.expo.io/versions/v36.0.0/get-started/create-a-new-app/">Create a new app</a></div><div class="css-jtawwa"><div class="css-jul3dd">Tutorial</div><a class="css-17n9ee2 css-mio2td" href="https://docs.expo.io/versions/v36.0.0/tutorial/planning/">Introduction</a><a class="css-17n9ee2 css-mio2td" href="https://docs.expo.io/versions/v36.0.0/tutorial/text/">Styling text</a><a class="css-17n9ee2 css-mio2td" href="https://docs.expo.io/versions/v36.0.0/tutorial/image/">Adding an image</a><a class="css-17n9ee2 css-mio2td" href="https://docs.expo.io/versions/v36.0.0/tutorial/button/">Creating a button</a><a class="css-17n9ee2 css-mio2td" href="https://docs.expo.io/versions/v36.0.0/tutorial/image-picker/">Picking an image</a><a class="css-17n9ee2 css-mio2td" href="https://docs.expo.io/versions/v36.0.0/tutorial/sharing/">Sharing the image</a><a class="css-17n9ee2 css-mio2td" href="https://docs.expo.io/versions/v36.0.0/tutorial/platform-differences/">Handling platform differences</a><a class="css-17n9ee2 css-mio2td" href="https://docs.expo.io/versions/v36.0.0/tutorial/configuration/">Configuring a splash screen and app icon</a><a class="css-17n9ee2 css-mio2td" href="https://docs.expo.io/versions/v36.0.0/tutorial/follow-up/">Learning more</a></div><div class="css-jtawwa"><div class="css-jul3dd">Next Steps</div><a class="css-17n9ee2 css-mio2td" href="https://docs.expo.io/versions/v36.0.0/next-steps/using-the-documentation/">Using the documentation</a><a class="css-17n9ee2 css-mio2td" href="https://docs.expo.io/versions/v36.0.0/next-steps/community/">Join the community</a><a class="css-17n9ee2 css-mio2td" href="https://docs.expo.io/versions/v36.0.0/next-steps/additional-resources/">Additional resources</a></div></div></div><div><a class="css-768f4r css-1o5yobv">Managed Workflow<i class="fas fa-chevron-down" style="position: absolute; right: 0px;"></i></a></div><div><a class="css-768f4r css-1o5yobv">Bare Workflow<i class="fas fa-chevron-down" style="position: absolute; right: 0px;"></i></a></div><div><a class="css-768f4r css-1o5yobv">API Reference<i class="fas fa-chevron-down" style="position: absolute; right: 0px;"></i></a></div></nav></div></div><div class="css-100ilho"><div class="css-18vyaad"><div></div><div class="css-145o6e2"><h1 data-heading="true" class="css-y7h5jf">Handling Assets</h1><div><div data-text="true" class="css-1d4g4y7 ">This section covers all things related to handling assets with Expo here including bundling, caching, pre-loading and publishing.</div><h3 data-heading="true" class="css-rvore2"><div class="css-i07u6a"><span id="bundling-assets" class="css-1fj428k"></span><a href="https://docs.expo.io/versions/v36.0.0/guides/preloading-and-caching-assets/#bundling-assets" class="permalink css-1lc60ja"><svg aria-label="permalink" class="anchor-icon" viewBox="0 0 11 11" version="1.1" xmlns="http://www.w3.org/2000/svg"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g transform="translate(-432.000000, -181.000000)" fill="#9B9B9B"><path d="M442.36949,184.673746 L440.543368,186.500079 C440.047223,186.996013 439.369736,187.191548 438.72445,187.101937 L439.934732,185.891655 L441.760854,184.065321 C442.26505,183.561549 442.26505,182.743395 441.760854,182.238988 C441.256658,181.735003 440.438928,181.735003 439.934732,182.238988 L438.10861,184.065321 L436.897904,185.275815 C436.808293,184.630529 437.003616,183.95283 437.499762,183.456684 L439.325883,181.630775 C440.166281,180.789742 441.528881,180.789742 442.369278,181.630775 C443.209887,182.470748 443.209887,183.833772 442.36949,184.673746 L442.36949,184.673746 Z M438.717247,185.891655 L436.891125,187.717565 L436.282277,187.108928 L438.10861,185.282594 L438.717247,185.891655 L438.717247,185.891655 Z M433.238882,188.934838 C432.734686,189.439246 432.734686,190.256552 433.238882,190.760959 C433.743078,191.265579 434.560807,191.265579 435.065003,190.760959 L436.891125,188.934838 L438.101619,187.724344 C438.191442,188.369842 437.996119,189.047329 437.499974,189.543474 L435.673852,191.369384 C434.833455,192.210205 433.470854,192.210205 432.630457,191.369384 C431.789848,190.529411 431.789848,189.166387 432.630457,188.326413 L434.456579,186.500079 C434.952724,186.003722 435.630423,185.808399 436.275709,185.898222 L435.065215,187.108928 L433.238882,188.934838 L433.238882,188.934838 Z"></path></g></g></svg></a><div class="permalink-child">Bundling Assets</div></div></h3><div data-text="true" class="css-1d4g4y7 ">Bundling assets into your binary will provide for the best user experience as your assets will be available immediately. Instead of having to make a network request to the CDN to fetch your published assets, your app will fetch them from the local disk resulting in a faster, more efficient loading experience. Bundling assets also allows offline functionality.</div><div data-text="true" class="css-1d4g4y7 ">To bundle assets in your binary, use the <a href="https://docs.expo.io/versions/v36.0.0/workflow/configuration/" class="css-auvd9r" rel="noopener noreferrer">assetBundlePatterns</a> key in <code class="css-i30qvr inline">app.json</code> to provide a list of paths in your project directory:</div><pre><pre class="css-bp3bi7" data-text="true"><code class="css-s1wts9">"assetBundlePatterns": [
+  "assets/images/*"
+],
+</code></pre></pre><div data-text="true" class="css-1d4g4y7 ">Images with paths matching the given patterns will be bundled into your native binaries next time you run <code class="css-i30qvr inline">expo build</code>.</div><blockquote data-text="true" class="css-80nrkz"><div data-text="true" class="css-1d4g4y7 "><strong class="css-utowyr">Note</strong>: If your app contains an abnormal amount of assets or assets that are abnormally large in size, asset bundling may not be the best solution as it will cause your application size to bloat. If this is the case, be selective and bundle those assets that are essential and store the rest on the CDN.</div></blockquote><h3 data-heading="true" class="css-rvore2"><div class="css-i07u6a"><span id="pre-loading-and-caching-assets" class="css-1fj428k"></span><a href="https://docs.expo.io/versions/v36.0.0/guides/preloading-and-caching-assets/#pre-loading-and-caching-assets" class="permalink css-1lc60ja"><svg aria-label="permalink" class="anchor-icon" viewBox="0 0 11 11" version="1.1" xmlns="http://www.w3.org/2000/svg"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g transform="translate(-432.000000, -181.000000)" fill="#9B9B9B"><path d="M442.36949,184.673746 L440.543368,186.500079 C440.047223,186.996013 439.369736,187.191548 438.72445,187.101937 L439.934732,185.891655 L441.760854,184.065321 C442.26505,183.561549 442.26505,182.743395 441.760854,182.238988 C441.256658,181.735003 440.438928,181.735003 439.934732,182.238988 L438.10861,184.065321 L436.897904,185.275815 C436.808293,184.630529 437.003616,183.95283 437.499762,183.456684 L439.325883,181.630775 C440.166281,180.789742 441.528881,180.789742 442.369278,181.630775 C443.209887,182.470748 443.209887,183.833772 442.36949,184.673746 L442.36949,184.673746 Z M438.717247,185.891655 L436.891125,187.717565 L436.282277,187.108928 L438.10861,185.282594 L438.717247,185.891655 L438.717247,185.891655 Z M433.238882,188.934838 C432.734686,189.439246 432.734686,190.256552 433.238882,190.760959 C433.743078,191.265579 434.560807,191.265579 435.065003,190.760959 L436.891125,188.934838 L438.101619,187.724344 C438.191442,188.369842 437.996119,189.047329 437.499974,189.543474 L435.673852,191.369384 C434.833455,192.210205 433.470854,192.210205 432.630457,191.369384 C431.789848,190.529411 431.789848,189.166387 432.630457,188.326413 L434.456579,186.500079 C434.952724,186.003722 435.630423,185.808399 436.275709,185.898222 L435.065215,187.108928 L433.238882,188.934838 L433.238882,188.934838 Z"></path></g></g></svg></a><div class="permalink-child">Pre-loading and Caching Assets</div></div></h3><div data-text="true" class="css-1d4g4y7 ">Assets are cached differently depending on where they're stored and how they're used. This guide offers best practices for making sure you only download assets when you need to. In order to keep the loading screen visible while caching assets, it's also a good idea to render <a href="https://docs.expo.io/versions/v36.0.0/sdk/app-loading/#app-loading" class="css-auvd9r" rel="noopener noreferrer">AppLoading</a> and only that component until everything is ready.</div><div data-text="true" class="css-1d4g4y7 ">For images that saved to the local filesytem, use <a href="https://docs.expo.io/versions/v36.0.0/sdk/asset/" class="css-auvd9r" rel="noopener noreferrer"><code class="css-i30qvr inline">Asset.fromModule(image).downloadAsync()</code></a> to download and cache the image. There is also a <a href="https://docs.expo.io/versions/v36.0.0/sdk/asset/#expoassetloadasyncmodules" class="css-auvd9r" rel="noopener noreferrer">loadAsync()</a> helper method to cache a batch of assets.</div><div data-text="true" class="css-1d4g4y7 ">For web images, use <code class="css-i30qvr inline">Image.prefetch(image)</code>. Continue referencing the image normally, e.g. with <code class="css-i30qvr inline">&lt;Image source={require('path/to/image.png')} /&gt;</code>.</div><div data-text="true" class="css-1d4g4y7 ">Fonts are pre-loaded using <code class="css-i30qvr inline">Font.loadAsync(font)</code>. The <code class="css-i30qvr inline">font</code>
+argument in this case is an object such as the following: <code class="css-i30qvr inline">{OpenSans:
+require('./assets/fonts/OpenSans.ttf')}</code>. <code class="css-i30qvr inline">@expo/vector-icons</code> provides a helpful shortcut for this object, which you see below as <code class="css-i30qvr inline">FontAwesome.font</code>.</div><pre><pre class="css-bp3bi7" data-text="true"><code class="css-s1wts9"><span class="token keyword">import</span> <span class="token operator">*</span> <span class="token keyword">as</span> React <span class="token keyword">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> View<span class="token punctuation">,</span> Text<span class="token punctuation">,</span> Image <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'react-native'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> AppLoading <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'expo'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token operator">*</span> <span class="token keyword">as</span> Font <span class="token keyword">from</span> <span class="token string">'expo-font'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> Asset <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'expo-asset'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> FontAwesome <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@expo/vector-icons'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">function</span> <span class="token function">cacheImages</span><span class="token punctuation">(</span>images<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> images<span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span>image <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">typeof</span> image <span class="token operator">===</span> <span class="token string">'string'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">return</span> Image<span class="token punctuation">.</span><span class="token function">prefetch</span><span class="token punctuation">(</span>image<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+      <span class="token keyword">return</span> Asset<span class="token punctuation">.</span><span class="token function">fromModule</span><span class="token punctuation">(</span>image<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">downloadAsync</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">function</span> <span class="token function">cacheFonts</span><span class="token punctuation">(</span>fonts<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> fonts<span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span>font <span class="token operator">=&gt;</span> Font<span class="token punctuation">.</span><span class="token function">loadAsync</span><span class="token punctuation">(</span>font<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token keyword">class</span> <span class="token class-name">AppContainer</span> <span class="token keyword">extends</span> <span class="token class-name">React<span class="token punctuation">.</span>Component</span> <span class="token punctuation">{</span>
+  state <span class="token operator">=</span> <span class="token punctuation">{</span>
+    isReady<span class="token punctuation">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+  <span class="token keyword">async</span> <span class="token function">_loadAssetsAsync</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> imageAssets <span class="token operator">=</span> <span class="token function">cacheImages</span><span class="token punctuation">(</span><span class="token punctuation">[</span>
+      <span class="token string">'https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png'</span><span class="token punctuation">,</span>
+      <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'./assets/images/circle.jpg'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">const</span> fontAssets <span class="token operator">=</span> <span class="token function">cacheFonts</span><span class="token punctuation">(</span><span class="token punctuation">[</span>FontAwesome<span class="token punctuation">.</span>font<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">await</span> Promise<span class="token punctuation">.</span><span class="token function">all</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token operator">...</span>imageAssets<span class="token punctuation">,</span> <span class="token operator">...</span>fontAssets<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token function">render</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span><span class="token keyword">this</span><span class="token punctuation">.</span>state<span class="token punctuation">.</span>isReady<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">return</span> <span class="token punctuation">(</span>
+        <span class="token operator">&lt;</span>AppLoading
+          startAsync<span class="token operator">=</span><span class="token punctuation">{</span><span class="token keyword">this</span><span class="token punctuation">.</span>_loadAssetsAsync<span class="token punctuation">}</span>
+          onFinish<span class="token operator">=</span><span class="token punctuation">{</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">setState</span><span class="token punctuation">(</span><span class="token punctuation">{</span> isReady<span class="token punctuation">:</span> <span class="token boolean">true</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">}</span>
+          onError<span class="token operator">=</span><span class="token punctuation">{</span>console<span class="token punctuation">.</span>warn<span class="token punctuation">}</span>
+        <span class="token operator">/</span><span class="token operator">&gt;</span>
+      <span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">return</span> <span class="token punctuation">(</span>
+      <span class="token operator">&lt;</span>View<span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span>Text<span class="token operator">&gt;</span>Hello world<span class="token punctuation">,</span> <span class="token keyword">this</span> is my app<span class="token punctuation">.</span><span class="token operator">&lt;</span><span class="token operator">/</span>Text<span class="token operator">&gt;</span>
+      <span class="token operator">&lt;</span><span class="token operator">/</span>View<span class="token operator">&gt;</span>
+    <span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></pre><div data-text="true" class="css-1d4g4y7 ">See a full working example in <a href="https://github.com/expo/expo/blob/master/templates/expo-template-tabs/App.js" class="css-auvd9r" rel="noopener noreferrer">this Expo template project</a>. You can also run <code class="css-i30qvr inline">expo init --template tabs</code>, which will set you up locally with the same template.</div><h3 data-heading="true" class="css-rvore2"><div class="css-i07u6a"><span id="publishing-assets" class="css-1fj428k"></span><a href="https://docs.expo.io/versions/v36.0.0/guides/preloading-and-caching-assets/#publishing-assets" class="permalink css-1lc60ja"><svg aria-label="permalink" class="anchor-icon" viewBox="0 0 11 11" version="1.1" xmlns="http://www.w3.org/2000/svg"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g transform="translate(-432.000000, -181.000000)" fill="#9B9B9B"><path d="M442.36949,184.673746 L440.543368,186.500079 C440.047223,186.996013 439.369736,187.191548 438.72445,187.101937 L439.934732,185.891655 L441.760854,184.065321 C442.26505,183.561549 442.26505,182.743395 441.760854,182.238988 C441.256658,181.735003 440.438928,181.735003 439.934732,182.238988 L438.10861,184.065321 L436.897904,185.275815 C436.808293,184.630529 437.003616,183.95283 437.499762,183.456684 L439.325883,181.630775 C440.166281,180.789742 441.528881,180.789742 442.369278,181.630775 C443.209887,182.470748 443.209887,183.833772 442.36949,184.673746 L442.36949,184.673746 Z M438.717247,185.891655 L436.891125,187.717565 L436.282277,187.108928 L438.10861,185.282594 L438.717247,185.891655 L438.717247,185.891655 Z M433.238882,188.934838 C432.734686,189.439246 432.734686,190.256552 433.238882,190.760959 C433.743078,191.265579 434.560807,191.265579 435.065003,190.760959 L436.891125,188.934838 L438.101619,187.724344 C438.191442,188.369842 437.996119,189.047329 437.499974,189.543474 L435.673852,191.369384 C434.833455,192.210205 433.470854,192.210205 432.630457,191.369384 C431.789848,190.529411 431.789848,189.166387 432.630457,188.326413 L434.456579,186.500079 C434.952724,186.003722 435.630423,185.808399 436.275709,185.898222 L435.065215,187.108928 L433.238882,188.934838 L433.238882,188.934838 Z"></path></g></g></svg></a><div class="permalink-child">Publishing Assets</div></div></h3><div data-text="true" class="css-1d4g4y7 ">When you publish your project, it will upload your assets to the CDN so that they may be fetched when users run your app. However, in order for assets to be uploaded to the CDN they must be explicitly required somewhere in your application's code. Conditionally requiring assets will result in the packager being unable to detect them and therefore they will not be uploaded when you publish your project.</div><h3 data-heading="true" class="css-rvore2"><div class="css-i07u6a"><span id="optimizing-assets" class="css-1fj428k"></span><a href="https://docs.expo.io/versions/v36.0.0/guides/preloading-and-caching-assets/#optimizing-assets" class="permalink css-1lc60ja"><svg aria-label="permalink" class="anchor-icon" viewBox="0 0 11 11" version="1.1" xmlns="http://www.w3.org/2000/svg"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g transform="translate(-432.000000, -181.000000)" fill="#9B9B9B"><path d="M442.36949,184.673746 L440.543368,186.500079 C440.047223,186.996013 439.369736,187.191548 438.72445,187.101937 L439.934732,185.891655 L441.760854,184.065321 C442.26505,183.561549 442.26505,182.743395 441.760854,182.238988 C441.256658,181.735003 440.438928,181.735003 439.934732,182.238988 L438.10861,184.065321 L436.897904,185.275815 C436.808293,184.630529 437.003616,183.95283 437.499762,183.456684 L439.325883,181.630775 C440.166281,180.789742 441.528881,180.789742 442.369278,181.630775 C443.209887,182.470748 443.209887,183.833772 442.36949,184.673746 L442.36949,184.673746 Z M438.717247,185.891655 L436.891125,187.717565 L436.282277,187.108928 L438.10861,185.282594 L438.717247,185.891655 L438.717247,185.891655 Z M433.238882,188.934838 C432.734686,189.439246 432.734686,190.256552 433.238882,190.760959 C433.743078,191.265579 434.560807,191.265579 435.065003,190.760959 L436.891125,188.934838 L438.101619,187.724344 C438.191442,188.369842 437.996119,189.047329 437.499974,189.543474 L435.673852,191.369384 C434.833455,192.210205 433.470854,192.210205 432.630457,191.369384 C431.789848,190.529411 431.789848,189.166387 432.630457,188.326413 L434.456579,186.500079 C434.952724,186.003722 435.630423,185.808399 436.275709,185.898222 L435.065215,187.108928 L433.238882,188.934838 L433.238882,188.934838 Z"></path></g></g></svg></a><div class="permalink-child">Optimizing Assets</div></div></h3><div data-text="true" class="css-1d4g4y7 ">You can manually optimize your assets by running the command <code class="css-i30qvr inline">expo optimize</code> which will use the <a href="https://sharp.pixelplumbing.com/en/stable/" class="css-auvd9r" rel="noopener noreferrer">sharp</a> library to compress your assets. You can set the quality of the compression by passing the <code class="css-i30qvr inline">--quality [number]</code> option to the command. For example, to compress to <code class="css-i30qvr inline">90%</code> you would run <code class="css-i30qvr inline">expo optimize --quality 0.9</code>.</div></div><footer class="css-7adv9h"><a class="css-vwj8sk" target="_blank" rel="noopener" href="https://forums.expo.io/">Ask a question on the forums</a><a class="css-vwj8sk" target="_blank" rel="noopener" href="https://github.com/expo/expo/edit/master/docs/pages/versions/v36.0.0/guides/preloading-and-caching-assets/#pre-loading-and-caching-assets.md">Edit this page</a></footer></div></div></div></div></div></div><script id="__NEXT_DATA__" type="application/json">{"props":{"pageProps":{}},"page":"/versions/v36.0.0/tutorial/text","query":{},"buildId":"IecYbnnRA9AINeMjAVqSV","nextExport":true,"ids":["17zxqdt","1rh54um","1lyhobo","3t8zi6","ov1ktg","1ptin5p","1wzqzdd","vocxkx","mn09n","ae52q9","bpiw2c","1a3whfz","y7h5jf","da6ez6","utowyr","1d4g4y7","80nrkz","7adv9h","vwj8sk","17n9ee2","1qpyj33","mio2td","jul3dd","187wcj4","1o5yobv","768f4r","kplx8c","rcoh84","jtawwa","1ie7odh","12q4rn9","szq7sb","1hiw76i","1st8cx","100ilho","18vyaad","145o6e2","s1wts9","i30qvr","bp3bi7","auvd9r","i07u6a","1lc60ja","1fj428k","bdja6z"]}</script><script async="" id="__NEXT_PAGE__/versions/v36.0.0/tutorial/text" src="./Handling Assets - Expo Documentation_files/text.js"></script><script async="" id="__NEXT_PAGE__/_app" src="./Handling Assets - Expo Documentation_files/_app.js"></script><script src="./Handling Assets - Expo Documentation_files/webpack-f0c6edbea5b547edc23f.js" async=""></script><script src="./Handling Assets - Expo Documentation_files/commons.d50483a6801bab0d0fdb.js" async=""></script><script src="./Handling Assets - Expo Documentation_files/main-cbdc5c03a076ff5cd7d3.js" async=""></script><iframe frameborder="0" scrolling="no" style="background-color: transparent; border: 0px; display: none;" src="./Handling Assets - Expo Documentation_files/saved_resource.html"></iframe><div id="GOOGLE_INPUT_CHEXT_FLAG" input="" input_stat="{&quot;tlang&quot;:true,&quot;tsbc&quot;:true,&quot;pun&quot;:true,&quot;mk&quot;:true,&quot;ss&quot;:true}" style="display: none;"></div><script type="text/javascript" async="" src="./Handling Assets - Expo Documentation_files/21db1c5c8b372aecca.js"></script><iframe id="blockbyte-bs-sidebar" class="notranslate" data-pos="right" src="./Handling Assets - Expo Documentation_files/saved_resource(1).html"></iframe><div id="blockbyte-bs-indicator" class="blockbyte-bs-fullHeight" style="width: 21px; height: 100%; top: 0%;"></div><script src="./Handling Assets - Expo Documentation_files/preloading-and-caching-assets.js"></script></body></html>
